@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#loading-bar {
+    height: 4px;
+    width: 0;
+    background-color: #316fa1;
+    transition: width 0.4s ease;
+}

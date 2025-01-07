@@ -1,0 +1,35 @@
+<h1>Main</h1>
+<p>This is main page.</p>
+
+<script>
+    function trackUserInteraction(event) {
+        console.log(`User interacted with: ${event.target.tagName}`);
+    }
+
+    function onPageLoad() {
+        console.log("Page has loaded successfully.");
+
+        const buttons = document.querySelectorAll('button');
+        buttons.forEach(button => {
+            button.addEventListener('click', trackUserInteraction);
+        });
+
+        setInterval(() => {
+            console.log("This message appears every 5 seconds.");
+        }, 5000);
+    }
+
+    window.addEventListener('load', onPageLoad);
+
+    window.addEventListener('scroll', () => {
+        console.log("User is scrolling the page.");
+    });
+
+    document.addEventListener('mousemove', (event) => {
+        console.log(`Mouse moved to: (${event.clientX}, ${event.clientY})`);
+    });
+
+    document.addEventListener('keydown', (event) => {
+        console.log(`Key pressed: ${event.key}`);
+    });
+</script>

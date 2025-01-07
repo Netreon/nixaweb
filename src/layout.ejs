@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <script src="/public/js/navigation.js" defer></script>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/public/css/global.css">
+</head>
+<body>
+    <div id="loading-bar" class="fixed top-0 left-0 z-50"></div>
+    <nav>
+        <a class="text-blue-500" href="/">Main Page</a>
+        <a class="text-blue-500" href="/information">Information</a>
+        <a class="text-blue-500" href="/contact">Contact</a>
+    </nav>
+    <div id="content">
+        <%- content %>
+    </div>
+</body>
+</html>
